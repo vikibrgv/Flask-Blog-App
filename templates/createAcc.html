@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container mt-5">
+  <h2 class="mb-4">Create an Account</h2>
+  
+  <form class="row g-3" method="POST" action="/create">
+    <div class="col-md-3">
+      <label for="inputEmail4" class="form-label">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" name="email" required>
+    </div>
+    
+    <div class="col-md-3">
+      <label for="inputPassword4" class="form-label">Password</label>
+      <input type="password" class="form-control" id="inputPassword4" name="password" required>
+    </div>
+    
+    <div class="col-3">
+      <label for="firstName" class="form-label">First Name</label>
+      <input type="text" class="form-control" id="firstName" name="first_name" required>
+    </div>
+    
+    <div class="col-3">
+      <label for="lastName" class="form-label">Last Name</label>
+      <input type="text" class="form-control" id="lastName" name="last_name" required>
+    </div>
+    
+    <div class="col-md-3">
+      <label for="inputCity" class="form-label">City</label>
+      <input type="text" class="form-control" id="inputCity" name="city" required>
+    </div>
+    
+    <div class="col-md-4">
+      <label for="inputState" class="form-label">State</label>
+      <select id="inputState" class="form-select" name="state" required>
+        <option selected disabled value="">Choose...</option>
+        <option>Punjab</option>
+        <option>Delhi</option>
+        <option>Bihar</option>
+        <option>Rajasthan</option>
+      </select>
+    </div>
+    
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Zip</label>
+      <input type="text" class="form-control" id="inputZip" name="zip" required>
+    </div>
+    
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Sign up</button>
+    </div>
+  </form>
+</div>
+
+{% endblock body %}
